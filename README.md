@@ -2,6 +2,9 @@
 
 MongoDB is an open source NoSQL database management program.
 
+<img src="./images/mongodb-1.png" alt="MongoDB Collection">
+<img src="./images/mongodb-2.png" alt="MongoDB Documents">
+
 ## 📖 Chapters
 
 1. What is MongoDB?
