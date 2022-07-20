@@ -1,5 +1,7 @@
 # Complete MongoDB Tutorial
 
+MongoDB is an open source NoSQL database management program.
+
 ## 📖 Chapters
 
 1. What is MongoDB?
