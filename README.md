@@ -1,6 +1,6 @@
 # Complete MongoDB Tutorial
 
-MongoDB is an open source NoSQL database management program.
+MongoDB is an open source NoSQL database management program. Instead of tables columns and rows, it uses collections and documents.
 
 <img src="./images/mongodb-1.png" alt="MongoDB Collection">
 <img src="./images/mongodb-2.png" alt="MongoDB Documents">
