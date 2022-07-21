@@ -5,6 +5,13 @@ MongoDB is an open source NoSQL database management program. Instead of tables c
 <img src="./images/mongodb-1.png" alt="MongoDB Collection">
 <img src="./images/mongodb-2.png" alt="MongoDB Documents">
 
+## 🛠 Installation
+
+https://www.mongodb.com/try/download/community
+
+- MongoDB Community Server
+- MongoDB Shell
+
 ## 📖 Chapters
 
 1. What is MongoDB?
