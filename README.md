@@ -2,6 +2,8 @@
 
 MongoDB is an open source NoSQL database management program. Instead of tables columns and rows, it uses collections and documents.
 
+MongoDB stores data inside of collections. Inside of a collection, there are documents which stores as BSON (Binary JSON). BSON is very similar to JSON and when fetching documents will ultimately return JSON objects.
+
 <img src="./images/mongodb-1.png" alt="MongoDB Collection">
 <img src="./images/mongodb-2.png" alt="MongoDB Documents">
 
