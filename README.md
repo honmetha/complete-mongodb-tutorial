@@ -12,6 +12,7 @@ MongoDB stores data inside of collections. Inside of a collection, there are doc
 https://www.mongodb.com/try/download/community
 
 - MongoDB Community Server
+- MongoDB Compass (Only for learning purposes and to visualize the data)
 - MongoDB Shell
 
 ## 📖 Chapters
