@@ -15,6 +15,36 @@ https://www.mongodb.com/try/download/community
 - MongoDB Compass (Only for learning purposes and to visualize the data)
 - MongoDB Shell
 
+## 🤖 Basic Commands
+
+```sh
+show dbs
+```
+
+```sh
+use bookstore
+```
+
+```sh
+cls
+```
+
+```sh
+db
+```
+
+```sh
+show collections
+```
+
+```sh
+help
+```
+
+```sh
+exit
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
