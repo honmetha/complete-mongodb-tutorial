@@ -57,6 +57,30 @@ db.authors.insertOne({ name: "Brandon Sanderson", age: 60 })
 db.books.insertMany([{title: "The Light Fantastic", author: "Terry Pratchett", pages: 250, rating: 6, genres: ["fantasy"]}, {title: "Dune", author: "Frank Herbert", pages: 500, rating: 10, genres: ["sci-fi", "dystopian"]}])
 ```
 
+```sh
+db.books.find()
+```
+
+```sh
+db.books.find({author: "Terry Pratchett"})
+```
+
+```sh
+db.books.find({author: "Terry Pratchett", rating: 7})
+```
+
+```sh
+db.books.find({author: "Brandon Sanderson"}, {title: 1, author: 1})
+```
+
+```sh
+db.books.find({}, {title: 1, author: 1})
+```
+
+```sh
+db.books.findOne({_id: ObjectId("62e01f0129392a49cc78293b")})
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
