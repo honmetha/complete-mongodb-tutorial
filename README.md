@@ -62,6 +62,10 @@ db.books.find()
 ```
 
 ```sh
+it
+```
+
+```sh
 db.books.find({author: "Terry Pratchett"})
 ```
 
@@ -79,6 +83,26 @@ db.books.find({}, {title: 1, author: 1})
 
 ```sh
 db.books.findOne({_id: ObjectId("62e01f0129392a49cc78293b")})
+```
+
+```sh
+db.books.find().count()
+```
+
+```sh
+db.books.find({ author: "Brandon Sanderson" }).count()
+```
+
+```sh
+db.books.find().limit(3).count()
+```
+
+```sh
+db.books.find().sort({ title: 1 })
+```
+
+```sh
+db.books.find().sort({ title: 1 }).limit(3)
 ```
 
 ## 📖 Chapters
