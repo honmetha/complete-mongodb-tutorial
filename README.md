@@ -105,6 +105,14 @@ db.books.find().sort({ title: 1 })
 db.books.find().sort({ title: 1 }).limit(3)
 ```
 
+```sh
+db.books.insertOne({ title: "The Way of Kings", author: "Brandon Sanderson", rating: 9, pages: 400, genres: ["fantasy"], reviews: [{name: "yoshi", body: "Great book!!"}, {name: "mario", body: "so so"}] })
+```
+
+```sh
+db.books.insertMany([ { title: 'The Light Fantastic', author: 'Terry Pratchett', pages: 250, rating: 6, genres: ['fantasy', 'magic'], reviews: [ { name: 'Luigi', body: 'It was pretty good' }, { name: 'Bowser', body: 'Loved It!!!' }, ], }, { title: 'The Name of the Wind', author: 'Patrick Rothfuss', pages: 500, rating: 10, genres: ['fantasy'], reviews: [{ name: 'Peach', body: 'One of my favs' }], }, { title: 'The Color of Magic', author: 'Terry Pratchett', pages: 350, rating: 8, genres: ['fantasy', 'magic'], reviews: [ { name: 'Luigi', body: 'It was OK' }, { name: 'Bowser', body: 'Really good book' }, ], }, { title: '1984', author: 'George Orwell', pages: 300, rating: 6, genres: ['sci-fi', 'dystopian'], reviews: [ { name: 'Peach', body: 'Not my cup of tea' }, { name: 'Mario', body: 'Meh' }, ], }, ])
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
