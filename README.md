@@ -113,6 +113,34 @@ db.books.insertOne({ title: "The Way of Kings", author: "Brandon Sanderson", rat
 db.books.insertMany([ { title: 'The Light Fantastic', author: 'Terry Pratchett', pages: 250, rating: 6, genres: ['fantasy', 'magic'], reviews: [ { name: 'Luigi', body: 'It was pretty good' }, { name: 'Bowser', body: 'Loved It!!!' }, ], }, { title: 'The Name of the Wind', author: 'Patrick Rothfuss', pages: 500, rating: 10, genres: ['fantasy'], reviews: [{ name: 'Peach', body: 'One of my favs' }], }, { title: 'The Color of Magic', author: 'Terry Pratchett', pages: 350, rating: 8, genres: ['fantasy', 'magic'], reviews: [ { name: 'Luigi', body: 'It was OK' }, { name: 'Bowser', body: 'Really good book' }, ], }, { title: '1984', author: 'George Orwell', pages: 300, rating: 6, genres: ['sci-fi', 'dystopian'], reviews: [ { name: 'Peach', body: 'Not my cup of tea' }, { name: 'Mario', body: 'Meh' }, ], }, ])
 ```
 
+```sh
+db.books.find({ rating: {$gt: 7} })
+```
+
+```sh
+db.books.find({ rating: {$lt: 8} })
+```
+
+```sh
+db.books.find({ rating: {$lte: 8} })
+```
+
+```sh
+db.books.find({ rating: {$gt: 7}, author: "Patrick Rothfuss" })
+```
+
+```sh
+db.books.find({ $or: [{rating: 7}, {rating: 9}] })
+```
+
+```sh
+db.books.find({ $or: [{rating: 7}, {author: "Terry Pratchett"}] })
+```
+
+```sh
+db.books.find({ $or: [{pages: {$lt: 300}}, {pages: {$gt: 400}}] })
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
