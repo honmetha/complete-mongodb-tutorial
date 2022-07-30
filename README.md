@@ -141,6 +141,18 @@ db.books.find({ $or: [{rating: 7}, {author: "Terry Pratchett"}] })
 db.books.find({ $or: [{pages: {$lt: 300}}, {pages: {$gt: 400}}] })
 ```
 
+```sh
+db.books.find({ rating: {$in: [7,8,9]} })
+```
+
+```sh
+db.books.find({$or: [{rating: 7}, {rating: 8}, {rating: 9}]})
+```
+
+```sh
+db.books.find({rating: {$nin: [9]}})
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
