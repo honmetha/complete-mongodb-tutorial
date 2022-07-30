@@ -153,6 +153,26 @@ db.books.find({$or: [{rating: 7}, {rating: 8}, {rating: 9}]})
 db.books.find({rating: {$nin: [9]}})
 ```
 
+```sh
+db.books.find({genres: "fantasy"})
+```
+
+```sh
+db.books.find({genres: ["fantasy"]})
+```
+
+```sh
+db.books.find({genres: ["fantasy", "magic"]})
+```
+
+```sh
+db.books.find({genres: {$all: ["fantasy", "magic"]}})
+```
+
+```sh
+db.books.find({"reviews.name": "Luigi"})
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
