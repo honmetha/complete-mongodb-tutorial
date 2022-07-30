@@ -173,6 +173,14 @@ db.books.find({genres: {$all: ["fantasy", "magic"]}})
 db.books.find({"reviews.name": "Luigi"})
 ```
 
+```sh
+db.books.deleteOne({_id: ObjectId("62e40dc7c571c0f6761e9785")})
+```
+
+```sh
+db.books.deleteMany({author: 'Terry Pratchett'})
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
