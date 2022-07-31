@@ -181,6 +181,34 @@ db.books.deleteOne({_id: ObjectId("62e40dc7c571c0f6761e9785")})
 db.books.deleteMany({author: 'Terry Pratchett'})
 ```
 
+```sh
+db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9785")}, {$set: {rating: 8, pages: 360}})
+```
+
+```sh
+db.books.updateMany({author: 'Terry Pratchett'}, {$set: {author: 'Terry Pratchet'}})
+```
+
+```sh
+db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9785")}, {$inc: {pages: 2}})
+```
+
+```sh
+db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9785")}, {$inc: {pages: -2}})
+```
+
+```sh
+db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$pull: {genres: 'sci-fi'}})
+```
+
+```sh
+db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$push: {genres: 'sci-fi'}})
+```
+
+```sh
+db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$push: {genres: {$each: ['1','2']}}})
+```
+
 ## 📖 Chapters
 
 1. What is MongoDB?
