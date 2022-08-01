@@ -1,0 +1,12 @@
+{
+  "name": "complete-mongodb-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/honmetha/complete-mongodb-tutorial.git",
+  "author": "Hon <dennis.mejen@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.8.1"
+  }
+}
