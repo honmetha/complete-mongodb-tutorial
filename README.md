@@ -22,11 +22,7 @@ show dbs
 ```
 
 ```sh
-use bookstore
-```
-
-```sh
-cls
+use <database_name>
 ```
 
 ```sh
@@ -38,27 +34,15 @@ show collections
 ```
 
 ```sh
-help
+db.<collection>.insertOne({ <field> : <value> })
 ```
 
 ```sh
-exit
+db.<collection>.insertMany([{ <field1> : <value> }, { <field2> : <value> }])
 ```
 
 ```sh
-db.books.insertOne({title: "The Color of Magic", author: "Terry Pratchett", pages: 300, rating: 7, genres: ["fantasy", "magic"]})
-```
-
-```sh
-db.authors.insertOne({ name: "Brandon Sanderson", age: 60 })
-```
-
-```sh
-db.books.insertMany([{title: "The Light Fantastic", author: "Terry Pratchett", pages: 250, rating: 6, genres: ["fantasy"]}, {title: "Dune", author: "Frank Herbert", pages: 500, rating: 10, genres: ["sci-fi", "dystopian"]}])
-```
-
-```sh
-db.books.find()
+db.<collection>.find()
 ```
 
 ```sh
@@ -66,67 +50,51 @@ it
 ```
 
 ```sh
-db.books.find({author: "Terry Pratchett"})
+db.<collection>.find({ <field> : <value> })
 ```
 
 ```sh
-db.books.find({author: "Terry Pratchett", rating: 7})
+db.<collection>.find({ <field1> : <value> , <field2> : <value> })
 ```
 
 ```sh
-db.books.find({author: "Brandon Sanderson"}, {title: 1, author: 1})
+db.<collection>.find({}, { <field> : 0, <field> : 1})
 ```
 
 ```sh
-db.books.find({}, {title: 1, author: 1})
+db.<collection>.findOne({ <field> : <value> })
 ```
 
 ```sh
-db.books.findOne({_id: ObjectId("62e01f0129392a49cc78293b")})
+db.<collection>.find().count()
 ```
 
 ```sh
-db.books.find().count()
+db.<collection>.find().limit(3)
 ```
 
 ```sh
-db.books.find({ author: "Brandon Sanderson" }).count()
+db.<collection>.find().sort({ <field> : 1 })
 ```
 
 ```sh
-db.books.find().limit(3).count()
+db.<collection>.find().sort({ <field> : 1 }).limit(3)
 ```
 
 ```sh
-db.books.find().sort({ title: 1 })
+db.<collection>.find({ <field> : {$gt: 7} })
 ```
 
 ```sh
-db.books.find().sort({ title: 1 }).limit(3)
+db.<collection>.find({ <field> : {$lt: 8} })
 ```
 
 ```sh
-db.books.insertOne({ title: "The Way of Kings", author: "Brandon Sanderson", rating: 9, pages: 400, genres: ["fantasy"], reviews: [{name: "yoshi", body: "Great book!!"}, {name: "mario", body: "so so"}] })
+db.<collection>.find({ <field> : {$lte: 8} })
 ```
 
 ```sh
-db.books.insertMany([ { title: 'The Light Fantastic', author: 'Terry Pratchett', pages: 250, rating: 6, genres: ['fantasy', 'magic'], reviews: [ { name: 'Luigi', body: 'It was pretty good' }, { name: 'Bowser', body: 'Loved It!!!' }, ], }, { title: 'The Name of the Wind', author: 'Patrick Rothfuss', pages: 500, rating: 10, genres: ['fantasy'], reviews: [{ name: 'Peach', body: 'One of my favs' }], }, { title: 'The Color of Magic', author: 'Terry Pratchett', pages: 350, rating: 8, genres: ['fantasy', 'magic'], reviews: [ { name: 'Luigi', body: 'It was OK' }, { name: 'Bowser', body: 'Really good book' }, ], }, { title: '1984', author: 'George Orwell', pages: 300, rating: 6, genres: ['sci-fi', 'dystopian'], reviews: [ { name: 'Peach', body: 'Not my cup of tea' }, { name: 'Mario', body: 'Meh' }, ], }, ])
-```
-
-```sh
-db.books.find({ rating: {$gt: 7} })
-```
-
-```sh
-db.books.find({ rating: {$lt: 8} })
-```
-
-```sh
-db.books.find({ rating: {$lte: 8} })
-```
-
-```sh
-db.books.find({ rating: {$gt: 7}, author: "Patrick Rothfuss" })
+db.<collection>.find({ <field> : {$gt: 7}, <field> : <value> })
 ```
 
 ```sh
@@ -207,6 +175,14 @@ db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$push: {genres:
 
 ```sh
 db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$push: {genres: {$each: ['1','2']}}})
+```
+
+```sh
+help
+```
+
+```sh
+exit
 ```
 
 ## 📖 Chapters
