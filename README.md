@@ -98,83 +98,83 @@ db.<collection>.find({ <field> : {$gt: 7}, <field> : <value> })
 ```
 
 ```sh
-db.books.find({ $or: [{rating: 7}, {rating: 9}] })
+db.<collection>.find({ $or: [{ <field> : 7 }, { <field> : 9 }] })
 ```
 
 ```sh
-db.books.find({ $or: [{rating: 7}, {author: "Terry Pratchett"}] })
+db.<collection>.find({ $or: [{ <field1> : 7 }, { <field2> : "Terry Pratchett" }] })
 ```
 
 ```sh
-db.books.find({ $or: [{pages: {$lt: 300}}, {pages: {$gt: 400}}] })
+db.<collection>.find({ $or: [{ <field> : { $lt: 300 }}, { <field> : {$gt: 400}}] })
 ```
 
 ```sh
-db.books.find({ rating: {$in: [7,8,9]} })
+db.<collection>.find({ <field>: { $in : [7,8,9] }})
 ```
 
 ```sh
-db.books.find({$or: [{rating: 7}, {rating: 8}, {rating: 9}]})
+db.<collection>.find({$or: [{ <field> : 7}, { <field> : 8}, { <field> : 9}]})
 ```
 
 ```sh
-db.books.find({rating: {$nin: [9]}})
+db.<collection>.find({ <field> : { $nin: [9] }})
 ```
 
 ```sh
-db.books.find({genres: "fantasy"})
+db.<collection>.find({ <field> : "fantasy" })
 ```
 
 ```sh
-db.books.find({genres: ["fantasy"]})
+db.<collection>.find({ <field> : ["fantasy"] })
 ```
 
 ```sh
-db.books.find({genres: ["fantasy", "magic"]})
+db.<collection>.find({ <field> : ["fantasy", "magic"] })
 ```
 
 ```sh
-db.books.find({genres: {$all: ["fantasy", "magic"]}})
+db.<collection>.find({ <field> : { $all : ["fantasy", "magic"] }})
 ```
 
 ```sh
-db.books.find({"reviews.name": "Luigi"})
+db.<collection>.find({ <field.object_key> : <value> })
 ```
 
 ```sh
-db.books.deleteOne({_id: ObjectId("62e40dc7c571c0f6761e9785")})
+db.<collection>.deleteOne({ <field> : <value> })
 ```
 
 ```sh
-db.books.deleteMany({author: 'Terry Pratchett'})
+db.<collection>.deleteMany({ <field> : <value> })
 ```
 
 ```sh
-db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9785")}, {$set: {rating: 8, pages: 360}})
+db.<collection>.updateOne({ <field> : <value> }, { $set: { <field1> : <value> , <field2> : <value> }})
 ```
 
 ```sh
-db.books.updateMany({author: 'Terry Pratchett'}, {$set: {author: 'Terry Pratchet'}})
+db.<collection>.updateMany({ <field> : <value> }, { $set: { <field>: <value> }})
 ```
 
 ```sh
-db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9785")}, {$inc: {pages: 2}})
+db.<collection>.updateOne({ <field> : <value> }, { $inc: { pages: 2 }})
 ```
 
 ```sh
-db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9785")}, {$inc: {pages: -2}})
+db.<collection>.updateOne({ <field> : <value> }, { $inc: { pages: -2 }})
 ```
 
 ```sh
-db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$pull: {genres: 'sci-fi'}})
+db.<collection>.updateOne({ <field> : <value> }, { $pull: { genres: 'sci-fi' }})
 ```
 
 ```sh
-db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$push: {genres: 'sci-fi'}})
+db.<collection>.updateOne({ <field> : <value> }, { $push: { genres: 'sci-fi' }})
 ```
 
 ```sh
-db.books.updateOne({_id: ObjectId("62e40dc7c571c0f6761e9782")}, {$push: {genres: {$each: ['1','2']}}})
+db.<collection>.updateOne({ <field> : <value> }, { $push: { genres: { $each: ['1','2'] }}})
 ```
 
 ```sh
