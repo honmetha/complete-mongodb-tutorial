@@ -15,6 +15,10 @@ https://www.mongodb.com/try/download/community
 - MongoDB Compass (Only for learning purposes and to visualize the data)
 - MongoDB Shell
 
+https://www.postman.com/downloads/
+
+- Postman
+
 ## 🤖 Basic Commands
 
 ```sh
