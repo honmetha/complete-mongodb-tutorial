@@ -182,6 +182,22 @@ db.<collection>.updateOne({ <field> : <value> }, { $push: { genres: { $each: ['1
 ```
 
 ```sh
+db.books.find({rating: 8}).explain('executionStats')
+```
+
+```sh
+db.books.createIndex({ rating: 8 })
+```
+
+```sh
+db.books.getIndexes()
+```
+
+```sh
+db.books.dropIndex({rating: 8})
+```
+
+```sh
 help
 ```
 
