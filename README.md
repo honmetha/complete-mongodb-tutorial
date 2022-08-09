@@ -182,19 +182,19 @@ db.<collection>.updateOne({ <field> : <value> }, { $push: { genres: { $each: ['1
 ```
 
 ```sh
-db.books.find({rating: 8}).explain('executionStats')
+db.<collection>.find({ <field> : <value> }).explain('executionStats')
 ```
 
 ```sh
-db.books.createIndex({ rating: 8 })
+db.<collection>.createIndex({ <field> : <value> })
 ```
 
 ```sh
-db.books.getIndexes()
+db.<collection>.getIndexes()
 ```
 
 ```sh
-db.books.dropIndex({rating: 8})
+db.<collection>.dropIndex({ <field> : <value> })
 ```
 
 ```sh
