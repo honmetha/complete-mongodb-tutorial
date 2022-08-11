@@ -38,11 +38,11 @@ show collections
 ```
 
 ```sh
-db.<collection>.insertOne({ <field> : <value> })
+db.<collection>.insertOne({<field>:<value>})
 ```
 
 ```sh
-db.<collection>.insertMany([{ <field1> : <value> }, { <field2> : <value> }])
+db.<collection>.insertMany([{<field1>:<value>},{<field2>:<value>}])
 ```
 
 ```sh
@@ -54,19 +54,19 @@ it
 ```
 
 ```sh
-db.<collection>.find({ <field> : <value> })
+db.<collection>.find({<field>:<value>})
 ```
 
 ```sh
-db.<collection>.find({ <field1> : <value> , <field2> : <value> })
+db.<collection>.find({<field1>:<value>,<field2>:<value>})
 ```
 
 ```sh
-db.<collection>.find({}, { <field> : 0, <field> : 1})
+db.<collection>.find({},{<field>:0,<field>:1})
 ```
 
 ```sh
-db.<collection>.findOne({ <field> : <value> })
+db.<collection>.findOne({<field>:<value>})
 ```
 
 ```sh
@@ -78,115 +78,115 @@ db.<collection>.find().limit(3)
 ```
 
 ```sh
-db.<collection>.find().sort({ <field> : 1 })
+db.<collection>.find().sort({<field>:1})
 ```
 
 ```sh
-db.<collection>.find().sort({ <field> : 1 }).limit(3)
+db.<collection>.find().sort({<field>:1}).limit(3)
 ```
 
 ```sh
-db.<collection>.find({ <field> : {$gt: 7} })
+db.<collection>.find({<field>:{$gt:7}})
 ```
 
 ```sh
-db.<collection>.find({ <field> : {$lt: 8} })
+db.<collection>.find({<field>:{$lt:8} })
 ```
 
 ```sh
-db.<collection>.find({ <field> : {$lte: 8} })
+db.<collection>.find({<field>:{$lte:8} })
 ```
 
 ```sh
-db.<collection>.find({ <field> : {$gt: 7}, <field> : <value> })
+db.<collection>.find({<field>:{$gt:7},<field>:<value> })
 ```
 
 ```sh
-db.<collection>.find({ $or: [{ <field> : 7 }, { <field> : 9 }] })
+db.<collection>.find({$or:[{<field>:7},{<field>:9}]})
 ```
 
 ```sh
-db.<collection>.find({ $or: [{ <field1> : 7 }, { <field2> : "Terry Pratchett" }] })
+db.<collection>.find({$or:[{<field1>:7},{<field2>:"Terry Pratchett"}]})
 ```
 
 ```sh
-db.<collection>.find({ $or: [{ <field> : { $lt: 300 }}, { <field> : {$gt: 400}}] })
+db.<collection>.find({$or:[{<field>:{$lt:300}},{<field>:{$gt:400}}]})
 ```
 
 ```sh
-db.<collection>.find({ <field>: { $in : [7,8,9] }})
+db.<collection>.find({<field>:{$in:[7,8,9]}})
 ```
 
 ```sh
-db.<collection>.find({$or: [{ <field> : 7}, { <field> : 8}, { <field> : 9}]})
+db.<collection>.find({$or:[{<field>:7},{<field>:8},{<field>:9}]})
 ```
 
 ```sh
-db.<collection>.find({ <field> : { $nin: [9] }})
+db.<collection>.find({<field>:{$nin:[9]}})
 ```
 
 ```sh
-db.<collection>.find({ <field> : "fantasy" })
+db.<collection>.find({<field>:"fantasy"})
 ```
 
 ```sh
-db.<collection>.find({ <field> : ["fantasy"] })
+db.<collection>.find({<field>:["fantasy"]})
 ```
 
 ```sh
-db.<collection>.find({ <field> : ["fantasy", "magic"] })
+db.<collection>.find({<field>:["fantasy","magic"]})
 ```
 
 ```sh
-db.<collection>.find({ <field> : { $all : ["fantasy", "magic"] }})
+db.<collection>.find({<field>:{$all:["fantasy","magic"]}})
 ```
 
 ```sh
-db.<collection>.find({ <field.object_key> : <value> })
+db.<collection>.find({<field.object_key>:<value>})
 ```
 
 ```sh
-db.<collection>.deleteOne({ <field> : <value> })
+db.<collection>.deleteOne({<field>:<value>})
 ```
 
 ```sh
-db.<collection>.deleteMany({ <field> : <value> })
+db.<collection>.deleteMany({<field>:<value>})
 ```
 
 ```sh
-db.<collection>.updateOne({ <field> : <value> }, { $set: { <field1> : <value> , <field2> : <value> }})
+db.<collection>.updateOne({<field>:<value>},{$set:{<field1>:<value>,<field2>:<value>}})
 ```
 
 ```sh
-db.<collection>.updateMany({ <field> : <value> }, { $set: { <field>: <value> }})
+db.<collection>.updateMany({<field>:<value>},{$set:{<field>:<value>}})
 ```
 
 ```sh
-db.<collection>.updateOne({ <field> : <value> }, { $inc: { pages: 2 }})
+db.<collection>.updateOne({<field>:<value>},{$inc:{pages: 2}})
 ```
 
 ```sh
-db.<collection>.updateOne({ <field> : <value> }, { $inc: { pages: -2 }})
+db.<collection>.updateOne({<field>:<value>},{$inc:{pages: -2}})
 ```
 
 ```sh
-db.<collection>.updateOne({ <field> : <value> }, { $pull: { genres: 'sci-fi' }})
+db.<collection>.updateOne({<field>:<value>},{$pull:{genres:'sci-fi'}})
 ```
 
 ```sh
-db.<collection>.updateOne({ <field> : <value> }, { $push: { genres: 'sci-fi' }})
+db.<collection>.updateOne({<field>:<value>},{$push:{genres:'sci-fi'}})
 ```
 
 ```sh
-db.<collection>.updateOne({ <field> : <value> }, { $push: { genres: { $each: ['1','2'] }}})
+db.<collection>.updateOne({<field>:<value>},{$push:{genres:{$each:['1','2']}}})
 ```
 
 ```sh
-db.<collection>.find({ <field> : <value> }).explain('executionStats')
+db.<collection>.find({<field>:<value>}).explain('executionStats')
 ```
 
 ```sh
-db.<collection>.createIndex({ <field> : <value> })
+db.<collection>.createIndex({<field>:<value>})
 ```
 
 ```sh
@@ -194,7 +194,7 @@ db.<collection>.getIndexes()
 ```
 
 ```sh
-db.<collection>.dropIndex({ <field> : <value> })
+db.<collection>.dropIndex({<field>:<value>})
 ```
 
 ```sh
