@@ -90,15 +90,15 @@ db.<collection>.find({<field>:{$gt:7}})
 ```
 
 ```sh
-db.<collection>.find({<field>:{$lt:8} })
+db.<collection>.find({<field>:{$lt:8}})
 ```
 
 ```sh
-db.<collection>.find({<field>:{$lte:8} })
+db.<collection>.find({<field>:{$lte:8}})
 ```
 
 ```sh
-db.<collection>.find({<field>:{$gt:7},<field>:<value> })
+db.<collection>.find({<field>:{$gt:7},<field>:<value>})
 ```
 
 ```sh
@@ -162,11 +162,11 @@ db.<collection>.updateMany({<field>:<value>},{$set:{<field>:<value>}})
 ```
 
 ```sh
-db.<collection>.updateOne({<field>:<value>},{$inc:{pages: 2}})
+db.<collection>.updateOne({<field>:<value>},{$inc:{pages:2}})
 ```
 
 ```sh
-db.<collection>.updateOne({<field>:<value>},{$inc:{pages: -2}})
+db.<collection>.updateOne({<field>:<value>},{$inc:{pages:-2}})
 ```
 
 ```sh
